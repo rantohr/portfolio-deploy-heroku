@@ -1,0 +1,164 @@
+@import "./variables.scss";
+
+body {
+  font-family: "Courier New", monospace;
+  background-color: $primaryColor;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: xxx-large;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: $transition;
+}
+
+a:hover {
+  transform: scale(1.2);
+}
+
+button {
+  align-items: center;
+  appearance: none;
+  // border-radius: 6px;
+  border: solid 0.1em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  transition: $transition;
+  width: 16em;
+  height: 3em;
+  background-color: transparent;
+  font-size: 12pt;
+}
+
+button:hover {
+  color: $primaryColor;
+  background-color: #fff;
+}
+
+button:active {
+  transform: translateY(0.1em);
+}
+
+.button-a {
+  align-items: center;
+  appearance: none;
+  // border-radius: 6px;
+  border: solid 0.1em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  transition: $transition;
+  width: 16em;
+  height: 3em;
+  background-color: transparent;
+  font-size: 12pt;
+}
+.button-a:hover {
+  color: $primaryColor;
+  background-color: #fff;
+  transform: scale(1) !important;
+}
+.button-a:active {
+  transform: translateY(0.1em);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  92% {
+    transform: translateX(0);
+    color: $textColor;
+    opacity: 0.8;
+  }
+  94% {
+    transform: translateX(random(10) - 5px);
+    color: $secondaryColor;
+    opacity: 0.4;
+  }
+  96% {
+    transform: translateX(random(10) - 5px);
+    color: $primaryColor;
+    opacity: 0.3;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  98% {
+    transform: translateX(random(10) - 5px);
+    color: $textColor;
+    opacity: 0.8;
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+  }
+  99% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glitchBlackText {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  92% {
+    transform: translateX(0);
+    color: $primaryColor;
+    opacity: 0.8;
+  }
+  94% {
+    transform: translateX(random(10) - 5px);
+    color: $secondaryColor;
+    opacity: 0.4;
+  }
+  96% {
+    transform: translateX(random(10) - 5px);
+    color: $primaryColor;
+    opacity: 0.3;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  98% {
+    transform: translateX(random(10) - 5px);
+    color: $primaryColor;
+    opacity: 0.8;
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+  }
+  99% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes clip {
+  91% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  92% {
+    clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%);
+  }
+  98% {
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+  }
+  99% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
